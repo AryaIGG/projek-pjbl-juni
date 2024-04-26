@@ -1,72 +1,185 @@
-*{
-   margin: 0;
-   padding: 0; 
-}
-
-body {
-    background-color: rgb(0, 0, 0);
-}
-
-.container{
-    display: flex;
-    width: 100%;
-    height: 100vh;
+:root{
+    --home: red;
+    --bg: #010101;
+    --filter: #be7937;
+    --bgmenu: #ffff;
+    }
     
-}
+    *{
+        
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        text-decoration: none;
+    
+    }
+    
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:var(--bg);
+        color:#fff;
+       background-image: url(latar\ kopi.jpeg);
+        background-size: cover;
+        
+    }
+    
+    
+    .navbar{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+       padding:1.5rem 7%;
+        background-color: rgb(1, 1, 1, 0.8%);
+        left: 0;
+        right: 0;
+        z-index: 9999999999;
+    }
+    
+    .navbar .navbar-logo{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2rem;
+        font-weight: 850;
+        color:var(--bg);
+        font-style: italic;
+    }
+    .navbar .navbar-logo:hover{
+        transform: scale(1.1);
+        transition: 0.2s linear;
+    }
+    .navbar .navbar-logo span{
+        color:var(--filter);
+    }
+    
+    .navbar .navbar-nav a{
+        color:white;
+        text-decoration: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        background-color: #33333380;
+         backdrop-filter: blur(10px);
+         font-weight: 500;
+     }
+ 
+     .navbar-nav .home{
+        background-color: #fdfdfd;
+         color: #010101;
+         border-radius: 30px 30px 30px 30px;
+         transition: all 0.5s;
+     }
+ 
+     .navbar-nav .home:hover{
+         color: black;
+         background-color: #f0f0f0;
+         transition: 0.5s;
+         transform: scale(1.1);
+         font-weight: 500;
+     }
+ 
+     .navbar-nav .menu{
+         background-color: #fdfdfd;
+         color: #010101;
+         border-radius: 30px 30px 30px 30px;
+         transition: all 0.5s;
 
-.navbar{
-    display: flex;
-    padding: 15px;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    background-color: rgb(0, 0, 0);
-}
+     }
+ 
+     .navbar-nav .menu:hover{
+         color: black;
+         background-color: #f0f0f0;
+         transition: 0.5s;
+         transform: scale(1.1);
+         font-weight: 500;
+     }
+ 
+     .navbar-nav .order{
+         background-color: #fdfdfd;
+         color: #010101;
+         border-radius: 30px 30px 30px 30px;
+         transition: all 0.5s;
+     }
+ 
+     .navbar-nav .order:hover{
+         color: black;
+         background-color: #f0f0f0;
+         transition: 0.5s;
+         transform: scale(1.1);
+         font-weight: 500;
+     }
+ 
+     .navbar-nav .contact{
+         background-color: #fdfdfd;
+         color: #010101;
+         border-radius: 30px 30px 30px 30px;
+         transition: all 0.5s;
+     }
+ 
+     .navbar-nav .contact:hover{
+         color: black;
+         background-color: #f0f0f0;
+         transition: 0.5s;
+         transform: scale(1.1);
+         font-weight: 500;
+     }
 
-.brand{
-    flex-direction: row;
-    display: flex;
-    font-size: 1.5em;
-    text-transform: capitalize;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+     
+     .login{
+        padding: 10px;
+        background-color: var(--bgmenu);
+        border-radius: 100%;
+    }
 
-.stname{
-    font-weight: 550;
-    color:white;
-}
+    .login:hover{
+        transform: scale(1.1);
+        transition: 0.2s linear;
+      
+    }
 
-.ndname{
-    padding-left: 5px;
-    color:sienna;
-    font-weight: 700;
-}
+    
 
-.menu{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: small;
-    font-weight: 500;
-}
+    
+        
+    
 
-.menu > li > img {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-}
+    /tampilan/
 
-.menu>li>a{
-    list-style-type: none;
-    padding: 50px;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: white;
-}
+    .tampilan{
+        padding: 2.5rem 7%;
+    }
+    .judul-teks{
+        
+        font-family: Poppins;
+        font-size: 2.5rem;
+    }
 
-.menu>li>a:hover {
-    color: chocolate;
-    transition: all 0.5s ease-in-out
-}
+    .judul-teks span{
+        font-size: 1.1rem;
+        font-weight: 100;
+    }
+
+    .order{
+        font-size: 1rem;
+        font-family: sans-serif;
+        padding: 1.2rem 7%;
+        background-color: #be7937;
+        border-radius: 10px;
+        color:#f0f0f0;
+        font-weight: 550;
+    }
+
+    .order span:hover{
+        color:red;
+    }
+
+    /media Queries/
+    /* Tablet*/
+    @media (max-width: 758px){
+        html{
+            font-size: 62.5%;
+        }
+    }
+    /* mobile phone*/
+    @media (max-width: 450px){
+        html{
+            font-size: 55%;
+        }
+    }
